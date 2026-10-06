@@ -1,15 +1,11 @@
 <div align="center">
 
-# FPGA TETRIS
+<img src="assets/banner.svg" alt="FPGA TETRIS — A game about moving small blocks, designed one clock cycle at a time" width="100%">
 
-### A game about moving small blocks, designed one clock cycle at a time
-
-**SystemVerilog · ZedBoard · VGA**
-
-![SystemVerilog](https://img.shields.io/badge/RTL-SystemVerilog-6366F1?style=flat-square)
-![ZedBoard](https://img.shields.io/badge/Board-ZedBoard-0F172A?style=flat-square)
-![Vivado](https://img.shields.io/badge/Vivado-2020.1-0891B2?style=flat-square)
-![Stage](https://img.shields.io/badge/Stage-VGA%20Foundation-F59E0B?style=flat-square)
+![SystemVerilog](https://img.shields.io/badge/RTL-SystemVerilog-22D3EE?style=flat-square&labelColor=0B1020)
+![ZedBoard](https://img.shields.io/badge/Board-ZedBoard-A855F7?style=flat-square&labelColor=0B1020)
+![Vivado](https://img.shields.io/badge/Vivado-2020.1-22C55E?style=flat-square&labelColor=0B1020)
+![Stage](https://img.shields.io/badge/Stage-VGA%20Foundation-F97316?style=flat-square&labelColor=0B1020)
 
 Iowa State University · CPRE 487
 
@@ -75,6 +71,7 @@ These resource numbers describe the current VGA foundation only, not a finished 
 The pixel clock drives coordinate and sync generation, and the coordinates inside the visible area are turned into an RGB pattern.
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#22D3EE", "primaryTextColor": "#ffffff", "primaryBorderColor": "#0B1020", "lineColor": "#94A3B8", "secondaryColor": "#1E1B4B", "tertiaryColor": "#0B1020", "clusterBkg": "#F8FAFC", "clusterBorder": "#94A3B8", "edgeLabelBackground": "#F1F5F9", "fontFamily": "ui-sans-serif, system-ui, sans-serif"}}}%%
 flowchart TD
     C["clk_wiz_0 · 25 MHz setting"] --> T["vga_timing · coordinates and visible area"]
     T -->|"x · y · video_on"| P["test_pattern · RGB"]
