@@ -111,6 +111,26 @@ flowchart TD
 | **04 · 게임 로직** | 블록 생성 · 이동 · 회전 · 충돌 · 줄 삭제 · 점수 | 예정 |
 | **05 · 통합 검증** | 기준 모델 비교 · 장시간 테스트 · 보드 시연 | 예정 |
 
+## 내 역할
+
+- VGA 타이밍 모듈(`vga_timing.sv`), 테스트 패턴(`test_pattern.sv`), 최상위 모듈(`top.sv`) 작성
+- Clocking Wizard로 25 MHz 픽셀 클럭을 구성하고 ZedBoard 핀 제약 파일(`zedboard_vga.xdc`) 작성
+- 합성과 Implementation을 실행하고 타이밍·자원·DRC 리포트를 날짜별로 기록
+- 프로젝트 기획안과 이 문서 작성
+
+## 배운 것
+
+- VGA 타이밍(수평·수직 동기, 표시 영역)과 픽셀 클럭의 관계
+- Vivado 흐름: IP 생성, 합성, Implementation, 타이밍 요약 읽기
+- 합성 결과에서 black box를 찾아 누락된 로직을 보완하는 디버깅
+- 실험마다 번호와 날짜를 붙이고, 확인한 것과 아직 확인하지 않은 것을 구분해 기록하는 습관
+
+## 사용한 자료
+
+- ZedBoard Hardware User's Guide
+- VGA 640×480 @ 60 Hz 타이밍 규격
+- Xilinx Vivado 2020.1, Clocking Wizard IP 문서
+
 ## 개발 환경
 
 | 항목 | 설정 |
